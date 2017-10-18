@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 public class Runner {
 	public static void main(String[] args) {
 		/*** Testing integer division --  truncates! Does NOT round off! ***/
@@ -10,6 +13,18 @@ public class Runner {
 		byteAnswer = numberBits / bite;
 		byteRemainder = numberBits & bite;
 		
-	System.out.println("bits = " + numberBits + " bytes = " + byteAnswer + " remainder = " + byteRemainder);
+		System.out.println("bits = " + numberBits + " bytes = " + byteAnswer + " remainder = " + byteRemainder);
+	
+		Scanner kbd = new Scanner(System.in);
+		System.out.println("Hello, enter your answer Y/N");
+		String answer = kbd.nextLine().toUpperCase();
+		System.out.println("You have entered: " + answer);
+		if(answer.equalsIgnoreCase("y")|| answer.equals("YES")) {
+			System.out.println("You have selected YES!");
+		} else if (answer.equals("N") || answer.equals("NO")) {
+			System.out.println("You have selected NO!");
+		} else {
+			System.out.println("I am soooo confused! What do you want??? Please, pretty please try again.");
+		}
 	}
 }
